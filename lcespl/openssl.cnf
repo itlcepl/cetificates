@@ -1,0 +1,21 @@
+[req]
+default_bits = 2048
+default_keyfile = lcespl.key
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = IN
+ST = Maharashtra
+L = Kolhapur
+O = LAXMI CIVIL ENGINEERING SERVICES PVT LTD
+OU = IT
+CN = lcespl.com  # Primary domain
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = lcespl.com
+DNS.2 = api.lcespl.com
